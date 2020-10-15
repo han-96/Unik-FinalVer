@@ -81,7 +81,7 @@ class NavigationBar extends BaseComponent {
                 </div>
                 <div class="user-board">
                     <img class="user-avatar" src="${this.state.data.userAvatar}" alt="user-avatar">
-                    <button class="sign-out">Sign out</p>
+                    <a href="index.html">Sign out</a>
                 </div>
             </div>
         `;
@@ -99,11 +99,6 @@ class NavigationBar extends BaseComponent {
         this.$brand = this._shadowRoot.querySelector('.brand');
         this.$brand.onclick = () => {
             router.navigate('/home');
-        }
-
-        this.$signout = this._shadowRoot.querySelector('.sign-out');
-        this.$signout.onclick = () => {
-            router.navigate('/');
         }
     }
 }
