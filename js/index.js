@@ -1,0 +1,30 @@
+import "./router/router.js";
+
+import "./screen/sign_up_screen.js";
+import "./screen/sign_in_screen.js";
+import "./screen/publish_project_screen.js";
+import "./screen/home_screen.js";
+import './screen/user_board.js';
+import "./screen/view_board.js";
+import "./screen/search_screen.js";
+import "./screen/get_started_screen.js";
+import "./screen/update_profile_screen.js";
+import "./screen/explore_screen.js";
+import "./screen/search_screen.js";
+import "./screen/choose_first_topic.js";
+
+import "./component/footer_box.js";
+import "./component/sign_up_form.js";
+import "./component/sign_in_form.js";
+import "./component/publish_project_form.js";
+import "./component/content_container.js";
+import "./component/modal_project_card.js";
+import "./component/navigation_bar.js";
+import "./component/choose_first_topic_box.js";
+import "./component/project_card.js";
+import "./component/comment_box.js";
+import "./component/profile_editor.js";
+import "./component/user_profile_card.js";
+import "./component/guest_profile_card.js";
+import "./component/search_box.js";
+import "./component/topic_box.js";

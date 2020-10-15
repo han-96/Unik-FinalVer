@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIK - Network & Online Portfolio for Designer</title>
+    <link rel="shortcut icon" href="./img/logo/logo_inverted.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- screen -->
+    <div id="screen"></div>
+
+    <!-- index.js -->
+    <script src="./js/index.js" type="module"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- NavigoJS -->
+    <script src="//unpkg.com/navigo@6"></script>
+
+    <!-- Sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+
+    <script>
+        // Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCdq7ZOsm1cJcl3PUnveGN34X6Yi1uBmrU",
+            authDomain: "cijs-48-tuan.firebaseapp.com",
+            databaseURL: "https://cijs-48-tuan.firebaseio.com",
+            projectId: "cijs-48-tuan",
+            storageBucket: "cijs-48-tuan.appspot.com",
+            messagingSenderId: "789952642574",
+            appId: "1:789952642574:web:c2628dc5b046bc6902865f",
+            measurementId: "G-1D6M4KLEV5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>
