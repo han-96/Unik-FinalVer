@@ -42,15 +42,28 @@ const style = /*html*/ `
     }
     .profile {
         margin-right: 20px;
+        background-color: white;
         display: flex;
         flex-flow: column;
-        width: 300px;
+        width: 500px;
         font-family: 'Ubuntu', sans-serif;
         padding: 15px;
         margin: 10px;
         border-radius: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         cursor: pointer;
+    }
+    button {
+        margin: 10px;
+        background-color: black;
+        width: 120px;
+        height: 36px;
+        text-decoration: none;
+        color: white;
+        border: none;
+        border-radius: 18px;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 15px;
     }
 
 </style>
@@ -72,6 +85,7 @@ class SearchBox extends BaseComponent {
                     </form>    
                     <button class="btn">Search</button>
             </div>
+            <button class="home">Home</button>
                 </div>
                 <div class="result"></div>
             </div>
@@ -94,6 +108,11 @@ class SearchBox extends BaseComponent {
                     </div>
                 `;
             }
+        }
+
+        this.$home = this._shadowRoot.querySelector('.home');
+        this.$home.onclick = () => {
+            router.navigate('/home');
         }
     }
 }

@@ -39,6 +39,22 @@ const style = /*html*/ `
         .user-avatar {
             cursor: pointer;
         }
+        button {
+        margin: 10px;
+        background-color: black;
+        width: 120px;
+        height: 36px;
+        text-decoration: none;
+        color: white;
+        border: none;
+        border-radius: 18px;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 15px;
+    }
+    .user-board {
+        display: flex;
+        align-items: center;
+    }
     </style>
 `;
 
@@ -61,9 +77,11 @@ class NavigationBar extends BaseComponent {
                     <a href="index.html#!/explore">Explore</a>
                     <a href="index.html#!/search">Search</a>
                     <a href="index.html#!/publish-project">Publish project</a>
+                    
                 </div>
                 <div class="user-board">
                     <img class="user-avatar" src="${this.state.data.userAvatar}" alt="user-avatar">
+                    <button class="sign-out">Sign out</p>
                 </div>
             </div>
         `;
@@ -81,6 +99,11 @@ class NavigationBar extends BaseComponent {
         this.$brand = this._shadowRoot.querySelector('.brand');
         this.$brand.onclick = () => {
             router.navigate('/home');
+        }
+
+        this.$signout = this._shadowRoot.querySelector('.sign-out');
+        this.$signout.onclick = () => {
+            router.navigate('/');
         }
     }
 }

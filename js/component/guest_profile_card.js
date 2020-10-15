@@ -5,7 +5,7 @@ const style = /*html*/ `
     .wrapper {
         display: flex;
         flex-flow: column;
-        width: 300px;
+        width: 550px;
         font-family: 'Ubuntu', sans-serif;
         padding: 15px;
         margin: 10px;

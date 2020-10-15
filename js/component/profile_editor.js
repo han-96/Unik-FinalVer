@@ -43,7 +43,7 @@ const style = /*html*/ `
         font-size: 15px;
     }
     .cancel {
-        margin-left: 810px;
+        margin-left: 780px;
         margin-right: 40px;
     }
     .section-1-1 {
@@ -102,6 +102,7 @@ const style = /*html*/ `
     display:flex;
     flex-direction: column;
 }
+
 </style>
 `
 class ProfileEditor extends BaseComponent {

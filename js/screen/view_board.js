@@ -2,7 +2,11 @@ import { BaseComponent } from "../component/base_component.js";
 import { getCurrentGuest, setHomeList } from "../utility.js";
 const style = /*html*/ `
 <style>
-        button {
+.demo {
+        display: flex;
+    }
+    button {
+        margin: 10px;
         background-color: black;
         width: 120px;
         height: 36px;
@@ -26,11 +30,13 @@ class ViewBoard extends BaseComponent {
     render() {
         this._shadowRoot.innerHTML = /*html*/ `
         ${style}
+            <div class="demo">
             <guest-profile-card></guest-profile-card>
             <content-container class="container" style="display: none"></content-container>
             <div class="btn">
                 <button class="project">Project</button>
                 <button class="saved">Saved Project</button>
+            </div>
             </div>
             <footer-box></footer-box>  
         `;

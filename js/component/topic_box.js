@@ -16,7 +16,7 @@ const style = /*html*/ `
     .container {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 15px;
+        margin: 100px 30px;
     }
     .graphic-design {
         display: flex;
@@ -26,6 +26,17 @@ const style = /*html*/ `
     }
         img {
         width: 200px;
+    }
+    .topic {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .graphic-design,
+    .photography,
+    .motion-graphic,
+    .illustration,
+    .product-design {
+        margin: 15px;
     }
 </style>
 `
@@ -43,6 +54,22 @@ class TopicBox extends BaseComponent {
                         <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c0766136467217.571e457d7ccd4.jpg" alt="graphic-design" class="img-graphic-design">
                         <p class="p-graphic-design">Graphic Design</p>
                     </div>
+                    <div class="photography">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c754d8105632873.5f7d793a4053e.jpg" alt="img" class="photography.">
+                        <p class="photography">Photography</p>
+                    </div>
+                    <div class="illustration">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/09fe00103576499.5f4ff3c12acb1.png" alt="img" class="illustration.">
+                        <p class="illustration">Illustration</p>
+                    </div>
+                    <div class="motion-graphic">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/ccf58797207565.5ebfbaf487582.png" alt="img" class="motion-graphic.">
+                        <p class="motion-graphic">Motion Graphic</p>
+                    </div>
+                    <div class="product-design">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/ea08de85581595.5d8070f4ce83d.jpg" alt="img" class="product-design.">
+                        <p class="product-design">Product Design</p>
+                    </div>
                 </div>
                 <content-container class="container" style="display: none"></content-container>
             </div>
@@ -53,6 +80,46 @@ class TopicBox extends BaseComponent {
         this.$graphicDesgin = this._shadowRoot.querySelector('.graphic-design');
         this.$graphicDesgin.onclick = async () => {
             let response = await firebase.firestore().collection('user').where('userName', '==', 'graphic-design').get();
+            let data = getDataFromDocs(response.docs)[0]; 
+            let list = data.project.toString();
+            list += ',';      
+            setHomeList(list);
+            this.$container.style = 'display: ';
+        }
+
+        this.$photography = this._shadowRoot.querySelector('.photography');
+        this.$photography.onclick = async () => {
+            let response = await firebase.firestore().collection('user').where('userName', '==', 'photography').get();
+            let data = getDataFromDocs(response.docs)[0]; 
+            let list = data.project.toString();
+            list += ',';      
+            setHomeList(list);
+            this.$container.style = 'display: ';
+        }
+
+        this.$illustration = this._shadowRoot.querySelector('.illustration');
+        this.$illustration.onclick = async () => {
+            let response = await firebase.firestore().collection('user').where('userName', '==', 'illustration').get();
+            let data = getDataFromDocs(response.docs)[0]; 
+            let list = data.project.toString();
+            list += ',';      
+            setHomeList(list);
+            this.$container.style = 'display: ';
+        }
+
+        this.$motionGraphic = this._shadowRoot.querySelector('.motion-graphic');
+        this.$motionGraphic.onclick = async () => {
+            let response = await firebase.firestore().collection('user').where('userName', '==', 'motion-graphic').get();
+            let data = getDataFromDocs(response.docs)[0]; 
+            let list = data.project.toString();
+            list += ',';      
+            setHomeList(list);
+            this.$container.style = 'display: ';
+        }
+
+        this.$productDesign = this._shadowRoot.querySelector('.product-design');
+        this.$productDesign.onclick = async () => {
+            let response = await firebase.firestore().collection('user').where('userName', '==', 'product-designc').get();
             let data = getDataFromDocs(response.docs)[0]; 
             let list = data.project.toString();
             list += ',';      

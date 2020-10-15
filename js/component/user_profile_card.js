@@ -5,7 +5,7 @@ const style = /*html*/ `
     .wrapper {
         display: flex;
         flex-flow: column;
-        width: 300px;
+        width: 550px;
         font-family: 'Ubuntu', sans-serif;
         padding: 15px;
         margin: 10px;
@@ -55,10 +55,10 @@ class UserProfile extends BaseComponent {
         this._shadowRoot.innerHTML = /*html*/ `
         ${style}
             <div class="cover-container">
-                    <img class ="cover" src="${this.state.data.cover}" alt="cover">
+                <img class ="cover" src="${this.state.data.cover}" alt="cover">
             </div>
             <div class="wrapper">
-                    <img src="${this.state.data.avatar}" alt="avatar">
+                <img src="${this.state.data.avatar}" alt="avatar">
                 <div class="info">
                     <p class="userName">Name    ${this.state.data.userName}</p>
                     <p class="age">Age  ${this.state.data.age}</p>

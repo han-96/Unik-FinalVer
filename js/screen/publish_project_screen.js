@@ -15,8 +15,8 @@ const style = /*html*/ `
     }
     publish-project-form {
         position: absolute;
-        left: 20%;
-        top: 10px;
+        left: 25%;
+        top: 100px;
     }
 </style>
 `;
@@ -29,6 +29,7 @@ class PublishProjectScreen extends BaseComponent {
     render() {
         this._shadowRoot.innerHTML = /*html*/ `
             ${style}
+            <navigation-bar></navigation-bar>
             <publish-project-form></publish-project-form>
             <footer-box></footer-box>
             <img class="bg" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c0766136467217.571e457d7ccd4.jpg" alt="background">

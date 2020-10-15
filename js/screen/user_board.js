@@ -2,7 +2,11 @@ import { BaseComponent } from "../component/base_component.js";
 import { getCurrentUser, setHomeList } from "../utility.js";
 const style = /*html*/ `
 <style>
+    .demo {
+        display: flex;
+    }
     button {
+        margin: 10px;
         background-color: black;
         width: 120px;
         height: 36px;
@@ -26,11 +30,16 @@ class UserBoard extends BaseComponent {
     render() {
         this._shadowRoot.innerHTML = /*html*/ `
         ${style}
+            <div class="demo">
             <user-profile-card></user-profile-card>
-            <content-container class="container" style="display: none"></content-container>
             <div class="btn">
+                <button class="home">Home</button>
+                <button class="edit">Edit Profile</button>
                 <button class="project">Project</button>
                 <button class="saved">Saved Project</button>
+            </div>
+            <content-container class="container" style="display: none"></content-container>
+            
             </div>
             
             <footer-box></footer-box>
@@ -55,6 +64,16 @@ class UserBoard extends BaseComponent {
             list += ',';
             setHomeList(list);
             this.$container.style = 'display: ';
+        }
+
+        this.$home = this._shadowRoot.querySelector('.home');
+        this.$home.onclick = () => {
+            router.navigate('/home');
+        }
+
+        this.$home = this._shadowRoot.querySelector('.edit');
+        this.$home.onclick = () => {
+            router.navigate('/update-profile');
         }
     }
 }
